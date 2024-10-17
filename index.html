@@ -22,15 +22,14 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: white;
         }
         .header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            padding: 20px 90px;
-            background-color: transparent
+            padding: 30px 70px;
+            background-color: transparent;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -41,6 +40,10 @@
             color: white;
             text-decoration: none;
             font-weight: 700;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
         }
         .navbar a {
             font-size: 17px;
@@ -53,54 +56,32 @@
         .navbar a:hover {
             color: lightgray;
         }
+        .auth {
+            display: flex;
+            margin-left: 20px;
+        }
+        .auth a {
+            font-size: 17px;
+            color: white;
+            text-decoration: none;
+            font-weight: 300;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+        .auth a:hover {
+            color: lightgray;
+        }
         .content {
-            max-width: 800px;
+            max-width: 500px;
             text-align: left;
             line-height: 1.6;
             background: rgba(0, 0, 0, 0.6);
             padding: 20px;
             border-radius: 8px;
-            margin-top: 120px; 
-            overflow: auto; 
-            height: calc(100vh - 120px); 
-        }
-        .content h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        .content p {
-            font-size: 18px;
-            margin-bottom: 15px;
-        }
-        .content ul {
-            margin-top: 10px;
-            padding-left: 20px;
-        }
-        .content ul li {
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .header {
-                padding: 10px 20px;
-            }
-            .navbar a {
-                font-size: 15px;
-                margin-left: 10px;
-            }
-            .logo {
-                font-size: 30px;
-            }
-            .content {
-                padding: 15px;
-                margin-top: 30px;
-            }
-            .content h1 {
-                font-size: 28px;
-            }
-            .content p {
-                font-size: 16px;
-            }
+            margin-top: 120px;
+            overflow: auto;
+            color: white;
+            height: calc(100vh 120px);
         }
         .content form {
             background: rgba(0, 0, 0, 0.6);
@@ -108,15 +89,12 @@
             border-radius: 8px;
             margin-top: 20px;
         }
-
         .content form label {
             display: block;
             margin-bottom: 10px;
             font-size: 18px;
         }
-
         .content form input,
-        .content form select,
         .content form textarea {
             width: 100%;
             padding: 10px;
@@ -127,24 +105,38 @@
             background-color: #fff;
             color: #333;
         }
-
         .content form textarea {
-            resize: vertical; /* Membolehkan ukuran vertikal */
+            resize: vertical;
         }
-
         .content form button {
             padding: 10px 20px;
             font-size: 18px;
             color: white;
-            background-color: #007bff; /* Warna tombol */
+            background-color: #007bff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
-
         .content form button:hover {
-            background-color: #0056b3; /* Warna tombol saat hover */
+            background-color: #0056b3;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px 20px;
+            }
+            .navbar a {
+                font-size: 15px;
+                margin-left: 10px;
+            }
+            .auth a {
+                font-size: 15px;
+                margin-left: 10px;
+            }
+            .logo {
+                font-size: 30px;
+            }
         }
     </style>
 </head>
@@ -157,12 +149,16 @@
             <a href="https://fajar-im.github.io/Rental-kontak/">Contact</a>
             <a href="https://fajar-im.github.io/Rental-tentang/">About</a>
         </nav>
+        <div class="auth">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
     </header>
 
     <div class="content">
         <h1>Hubungi Kami</h1>
         <p>Jika Anda memiliki pertanyaan, silakan isi formulir di bawah ini:</p>
-        <form action="proses.html" method="post">
+        <form action="#" method="post">
             <label for="name">Nama:</label>
             <input type="text" id="name" name="name" required>
 
@@ -177,3 +173,4 @@
     </div>
 </body>
 </html>
+
